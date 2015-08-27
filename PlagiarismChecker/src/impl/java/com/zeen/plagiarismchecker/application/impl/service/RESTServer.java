@@ -98,10 +98,6 @@ public class RESTServer {
             LOGGER.info("Starting server in port 8080");
             server.start();
             LOGGER.info("Started");
-//            conf.setResponseHeaderSize(getMaxResponseHeaderSizeSetting());
-
-            LOOGER.info("Resonse Header Max length: "+conf.getResponseHeaderSize+"");
-            LOOGER.info("Request Header Max length: "  + conf.getRequestHeaderSize+"");
             started = true;
             server.join();
             connector.join();

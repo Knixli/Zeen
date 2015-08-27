@@ -279,7 +279,7 @@ public class RESTServerIntegrationTest {
                 Joiner.on(',').join(ArticleRepositoryTestUtil.FOLDERS),
                 "--contentAnalyzers",
                 Joiner.on(',').join(contentAnalizersList), "--indexPaths",
-                indexRoot };
+                indexRoot,"--caseSensitive" };
         PlagiarismCheckerService.setupContext(args);
         ExecutorService executor = Executors.newFixedThreadPool(2);
 
@@ -325,7 +325,7 @@ public class RESTServerIntegrationTest {
                                         .newArrayList(new CheckResult(
                                                 articleId,
                                                 j,
-                                                ArticleRepositoryTestUtil.ARTICLES[articleId][j],
+                                              ArticleRepositoryTestUtil.ARTICLES[articleId][j],
                                                 contentAnalizersList)));
                         expected.add(paragraphCheckResult);
                     }

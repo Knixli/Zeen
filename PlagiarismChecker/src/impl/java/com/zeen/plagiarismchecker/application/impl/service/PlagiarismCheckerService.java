@@ -75,7 +75,7 @@ public class PlagiarismCheckerService {
                             paragraphCheckResults.set(i, paragraphCheckResult);
                         });
         String ret = String.format("Check done: results=%s", paragraphCheckResults);
-        LOGGER.info(ret.length());
+        LOGGER.info(ret.length()+"");
         return paragraphCheckResults;
     }
 
